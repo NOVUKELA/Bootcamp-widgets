@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine JS</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="wordCrushWordLengths.js"></script>
+    <script src="wordlenghtCrushAlpine.js"></script>
+
+    <script src="wordCrushShortestWord.js"></script>
+    <script src="wordCrushShortestWordAlpine.js"></script>
+
+    
+    <script src="WordCrush.js"></script>
+    <script src="wordCrushLongestWord.js"></script>
+    
+    <script src="totalBillAlpine.js"></script>
+    <script src="totalPhoneBill.js"></script>
+
+    <script src="enoughAirtime.js"></script>
+    <script src="enouhAirAlpine.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+</head>
+
+<body>
+
+        <div class="widget" x-data="enoughAir">
+            <h2>Enough Airtime</h2>
+            <div class="input ">
+                <label for="usage">Please enter your airtime usage:</label>
+                <input type="text" id="usage" x-model="airtimeUsage">
+            </div>
+            <div class="input ">
+                <label for="amount">Amount available:</label>
+                <input type="text" id="amount" x-model="availableAmount">
+            </div>
+
+            <div class="message" x-text="airtimeMessage">
+                Number of airtime left displayed here ...
+            </div>
+            <div>
+                <button x-on:click="calculate">Calculate airtime usage</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class= "widgets2" >
+
+        <div class="widget" x-data="billWidget"
+           >
+            <h2>Total phone bill</h2>
+            <div class="input ">
+                <label for="callSmsString"> Please enter string 'call, sms, call, sms, sms':</label>
+                <input type="text" id="callSmsString" x-model="airtimeUsage">
+            </div>
+
+            <div class="message" x-text="airtimeMessage">
+                totalPhoneBill will be displayed here ...
+            </div>
+            <div>
+                <button x-on:click="calculate1">Calculate airtime usage</button>
+            </div>
+        </div>
+
+
+
+
+        
+
+
+
+
+
+        <div class="widget" x-data="longestWidget">
+            <h2>Word game -Longest word</h2>
+            <br>
+
+            <div class="input ">
+                <label for="strMsg">Please Enter sentence:</label>
+                <input type="text" id="strMsg" x-model="sentence">
+            </div>
+
+            <div class="message" x-text="Message">;
+                Longest word results will be displayed here..
+            </div>
+            <div>
+                <button x-on:click="calculate3"> Start WordCrush</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=widgets2>
+
+        <div class="widget" x-data="lengthWidged">
+            <h2>Word game - Word Lengths</h2>
+            <br>
+
+            <div class="input ">
+                <label for="strMsg">Please enter sentence:</label>
+                <input type="text" id="strMsg" x-model="sentence">
+            </div>
+
+            <div class="message" x-text="Message">;
+                Longest word results will be displayed here..
+            </div>
+            <div>
+                <button x-on:click="calculate2"> Start WordCrush</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="widget" x-data="shortWidget">
+            <h2>Word game - Shortest word</h2>
+            <br>
+
+            <div class="input ">
+                <label for="strMsg">Please enter sentence:</label>
+                <input type="text" id="strMsg" x-model="sentence">
+            </div>
+
+            <div class="message" x-text="Message">;
+                Longest word results will be displayed here..
+            </div>
+            <div>
+                <button x-on:click="calculate2"> Start WordCrush</button>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
